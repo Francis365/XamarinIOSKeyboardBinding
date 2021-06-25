@@ -13,10 +13,9 @@ namespace Binding
   protocol, then [Model] is redundant and will generate code that will never
   be used.
 */
-
 	[Protocol, Model]
 	[BaseType(typeof(NSObject))]
-    interface KeyboardControllerCallback
+	interface KeyboardControllerCallback
 	{
 		// @required -(void)onKeyPadPressedWithText:(NSString * _Nullable)text;
 		[Abstract]
@@ -38,8 +37,12 @@ namespace Binding
 	[BaseType (typeof(NSObject))]
 	interface KeyboardProxy
 	{
-		// -(void)onloginWithViewController:(UIViewController * _Nonnull)viewController delegate:(id<KeyboardControllerCallback> _Nonnull)delegate;
-		[Export ("onloginWithViewController:delegate:")]
-		void OnloginWithViewController (UIViewController viewController, KeyboardControllerCallback @delegate);
+		// -(void)onLaunchKeyboardWithViewController:(UIViewController * _Nonnull)viewController delegate:(id<KeyboardControllerCallback> _Nonnull)delegate;
+		[Export ("onLaunchKeyboardWithViewController:delegate:")]
+		void OnLaunchKeyboardWithViewController (UIViewController viewController, KeyboardControllerCallback @delegate);
+
+		// -(void)onLoginWithUsername:(NSString * _Nonnull)username os:(NSString * _Nonnull)os imei:(NSString * _Nonnull)imei;
+		[Export ("onLoginWithUsername:os:imei:")]
+		void OnLoginWithUsername (string username, string os, string imei);
 	}
 }

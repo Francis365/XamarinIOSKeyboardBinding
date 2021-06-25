@@ -41,9 +41,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ObjcBindingApiDefinition Include="ApiDefinitions.cs" />
-  </ItemGroup>
-  <ItemGroup>
     <NativeReference Include="..\..\..\Desktop\KeyboardProxy\Chat.framework">
       <Kind>Framework</Kind>
       <Frameworks>Foundation UIKit</Frameworks>
@@ -52,6 +49,9 @@
       <Kind>Framework</Kind>
       <Frameworks>Foundation UIKit</Frameworks>
     </NativeReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ObjcBindingApiDefinition Include="ApiDefinitions.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.ObjCBinding.CSharp.targets" />
 </Project>
