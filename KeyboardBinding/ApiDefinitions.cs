@@ -1,7 +1,7 @@
 using Foundation;
 using UIKit;
 
-namespace Binding
+namespace ChatpayKeyboard
 {
 	// @protocol KeyboardControllerCallback
 	/*
